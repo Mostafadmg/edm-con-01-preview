@@ -2,7 +2,7 @@
 <html lang="en-GB"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&amp;display=swap"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><title>EveryDayMeds · Contraception prescribing protocol</title><style>
 :root{--forest:#0B4131;--forest-mid:#0f5240;--lime:#BFDF72;--ink:#1a2e23;--muted:#52665a;--line:#d4dfd6;--mist:#eef4ef;--red:#98263a;--red-bg:#fdecef;--red-br:#e7acb8;--amb:#80540e;--amb-bg:#fff4dc;--amb-br:#dfc382;--grn:#285e36;--grn-bg:#eaf5e9;--grn-br:#add0ae;--blu:#28497c;--blu-bg:#e8effc;--blu-br:#aabfe3}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;background:#edf2ee;color:var(--ink);font-family:Calibri,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.62}
+body{margin:0;background:#edf2ee;color:var(--ink);font-family:"Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;font-size:15px;line-height:1.62}
 a{color:var(--forest);text-underline-offset:3px}button,input{font:inherit}button{cursor:pointer}
 button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible,.table-wrap:focus-visible{outline:3px solid #8aae48;outline-offset:3px}
 .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:#fff;padding:12px;z-index:200}
@@ -1270,24 +1270,35 @@ details.fold[open]>:not(summary),details.tfold[open]>:not(summary){animation:non
 <div class="method-break" role="separator"><span>Everyone — Stage A checks</span></div>
 
 <section id="s3" class="protocol-section"><details class="fold"><summary class="section-heading"><h2>3. Stage A — Service Exclusions</h2></summary>
-<p>These end the episode. No class is offered and no alternative product is suggested, because the reason for refusal is not method-specific. Every row carries the reason it exists. The one exception is the age row, which rejects a single class.</p>
-<details class="tfold" open id="s3-1" data-sub><summary><h3>3.1 Service exclusions</h3></summary>
+<p style="font-size:15.5px;line-height:1.6;color:#3d5248;">These end the episode. No class is offered and no alternative product is suggested, because the reason for refusal is not method-specific. The one exception is the age row, which rejects a single class.</p>
+
+<div class="s13-symptoms-visual" style="margin:16px 0;">
+  <div class="s13-head">
+    <h3 style="margin:0 0 6px;color:#0B4131;">Service exclusions</h3>
+    <p style="margin:0;font-size:14px;color:#52665a;">Every rule below stops the consultation. Record the reason and provide appropriate safety-netting.</p>
+  </div>
+  <div class="symptom-row">
+    <div class="sym-card" style="border-left:4px solid #dc2626;"><strong>Age under 18</strong><p>At the verified date of birth. Adults 18+ only. Fraser competence and safeguarding cannot be assessed asynchronously.</p></div>
+    <div class="sym-card" style="border-left:4px solid #dc2626;"><strong>Not for own use / third party</strong><p>Consultation must be completed by the patient themselves. Third-party completion ends the episode.</p></div>
+    <div class="sym-card" style="border-left:4px solid #dc2626;"><strong>Unable to give informed consent</strong><p>Capacity cannot be confirmed remotely. Do not proceed.</p></div>
+    <div class="sym-card" style="border-left:4px solid #dc2626;"><strong>Safeguarding concern</strong><p>Any indicator of coercion, exploitation or abuse. Follow local safeguarding policy and do not supply.</p></div>
+    <div class="sym-card" style="border-left:4px solid #dc2626;"><strong>Identity cannot be verified</strong><p>Reliable identity confirmation is required before any supply.</p></div>
+    <div class="sym-card" style="border-left:4px solid #dc2626;"><strong>Duplicate or suspicious account pattern</strong><p>Multiple accounts, shared payment details or other fraud indicators. Hold and investigate.</p></div>
+  </div>
+  <div class="safety-bar"><strong>Outcome for all of the above:</strong> Not eligible for this online service. End the consultation, record the reason, and provide appropriate signposting or urgent advice where clinically required.</div>
+</div>
+
+<details class="tfold" open id="s3-1" data-sub><summary><h3>3.1 Full exclusion table (reference)</h3></summary>
 <div class="table-wrap" role="region" aria-label="Service exclusions" tabindex="0"><table><thead><tr><th style="width:32%">Rule / disclosure</th><th style="width:28%">Outcome</th><th>Why this rule exists</th></tr></thead><tbody>
-<tr><td>Age under 18 at the <strong>verified</strong> date of birth</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span></td><td>Adults 18 and over only. Fraser competence and safeguarding cannot be assessed through an asynchronous questionnaire.</td></tr>
-<tr><td>Not for the patient's own use, or a third party is completing the consultation</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span></td><td>The consultation must be completed by the person who will take the medicine. Third-party orders are not permitted.</td></tr>
-<tr><td>Identity verification not completed or failed</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span></td><td>Identity must be verified under EDM-ID-01 before prescribing.</td></tr>
-<tr><td>Delivery address outside the UK</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span></td><td>Registration, indemnity and safety-netting (including 999) are UK arrangements.</td></tr>
-<tr><td>Known or suspected pregnancy, or a positive pregnancy test</td><td><span class="tag global" data-tip="REJECT_EPISODE — ends the whole consultation; no COC or POP is offered">Global rejection</span> Direct to antenatal care or pregnancy options support. Do not prescribe.</td><td>Hormonal contraception is not started in pregnancy. “Not sure” is never treated as no.</td></tr>
-<tr><td>Pregnancy cannot be reasonably excluded, but is not known or suspected</td><td><span class="tag amber" data-tip="HOLD — nothing is authorised until the missing information is resolved">Hold</span> Quick-start route — apply <a href="#s14">§14</a>: start only if a high-sensitivity urine pregnancy test is negative, with additional precautions and a follow-up test 21 days after the last UPSI. If a negative test cannot be confirmed, hold.</td><td>FSRH permits quick starting when pregnancy cannot be excluded, provided a current pregnancy test is negative and follow-up testing is arranged. Rejecting outright would contradict §14. <span class="src" data-tip="FSRH Combined Hormonal Contraception — CHC §6.3.2">CHC §6.3.2</span></td></tr>
-<tr><td>Patient declines <em>both</em> record-verification consent and two-way communication</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span> Consultation cannot proceed on a questionnaire alone.</td><td>Declining GP notification alone does not stop the consultation. Declining both verification routes does.</td></tr>
-<tr><td>Indications the request is coerced or third-party controlled</td><td><span class="tag global" data-tip="REJECT_EPISODE — ends the whole consultation; no COC or POP is offered">Global rejection</span> Escalate under the safeguarding SOP. Do not raise the concern in an automated message.</td><td>Reproductive coercion can run towards contraception as well as away from it.</td></tr>
-<tr><td>Requesting contraception for a non-contraceptive indication only</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span></td><td>Acne, HMB, endometriosis, PMDD and menopause are outside this protocol’s screening.</td></tr>
-<tr><td>Prescriber cannot independently verify material clinical information or obtain the information needed for a safe decision</td><td><span class="tag global" data-tip="NOT_ELIGIBLE — service eligibility not met; the consultation ends">Not eligible</span> Consultation cannot proceed on a questionnaire alone.</td><td>A questionnaire alone is insufficient. Use timely two-way communication, clinical records or appropriate third-party information to verify material information; if verification cannot be achieved, do not prescribe.</td></tr>
-<tr><td>Age 50 or over requesting <strong>COC</strong> · Age 55 or over requesting <strong>POP</strong></td><td><span class="tag red" data-tip="REJECT_CLASS — COC is removed; POP is still assessed">Reject COC</span> age 50 or over<br><span class="tag red" data-tip="REJECT_CLASS — POP is removed; COC is still assessed">Reject POP</span> age 55 or over<br>A patient refused COC at 50 may still be eligible for POP until 55.</td><td>CHC until 50; POP until 55, in medically eligible patients.</td></tr>
+<tr><td>Age under 18 at the <strong>verified</strong> date of birth</td><td><span class="tag global">Not eligible</span></td><td>Adults 18 and over only. Fraser competence and safeguarding cannot be assessed through an asynchronous questionnaire.</td></tr>
+<tr><td>Not for the patient's own use, or a third party is completing the consultation</td><td><span class="tag global">Not eligible</span></td><td>The consultation must be completed by the person who will use the medicine.</td></tr>
+<tr><td>Unable to confirm capacity or informed consent</td><td><span class="tag global">Not eligible</span></td><td>Remote pathway cannot reliably assess capacity.</td></tr>
+<tr><td>Safeguarding concern identified</td><td><span class="tag global">Not eligible</span></td><td>Follow organisational safeguarding policy. Do not supply.</td></tr>
+<tr><td>Identity cannot be reliably verified</td><td><span class="tag global">Not eligible</span></td><td>Required before any remote supply.</td></tr>
+<tr><td>Duplicate accounts, shared payment methods or other fraud indicators</td><td><span class="tag global">Not eligible</span></td><td>Hold and investigate before any clinical decision.</td></tr>
 </tbody></table></div>
 </details>
 </details></section>
-
 <section id="s4" class="protocol-section"><details class="fold"><summary class="section-heading"><h2>4. Stage A — Red Flags</h2></summary>
 <p>A red-flag response immediately ends the consultation. No prescription or alternative treatment is offered. The patient is provided with immediate on-screen advice to seek appropriate medical attention (999, A&amp;E, NHS 111 or GP) without waiting for a pharmacy response.</p>
 <details class="tfold" open id="s4-1" data-sub><summary><h3>4.1 Red flags and required actions</h3></summary>
@@ -1728,17 +1739,97 @@ details.fold[open]>:not(summary),details.tfold[open]>:not(summary){animation:non
 
 <div class="method-break" role="separator"><span>Prescribing — COC and POP</span></div>
 
-<section id="s13" class="protocol-section"><details class="fold"><summary class="section-heading"><h2>13. Product Selection — After Eligibility Is Confirmed</h2></summary>
+<section id="s13" class="protocol-section">
+<style>
+@media (max-width: 700px) {
+  .s13-visual .cards, .s13-symptoms-visual .symptom-row, .s13-symptoms-visual .steps, .s13-symptoms-visual .notes {
+    grid-template-columns: 1fr !important;
+  }
+  .s13-visual, .s13-symptoms-visual { padding: 14px 12px; }
+  .line-card summary .line-head { flex-direction: column; gap: 8px; }
+}
+.s13-section-intro { background: #f7faf8; border-left: 4px solid #0B4131; padding: 14px 16px; margin: 12px 0 18px; border-radius: 0 10px 10px 0; }
+.s13-gap-card { background: #fff; border: 1px solid #d4dfd6; border-radius: 12px; padding: 16px; margin: 16px 0; }
+.s13-gap-card h4 { margin: 0 0 8px; color: #0B4131; font-size: 16px; }
+.s13-gap-card ul { margin: 8px 0 0; padding-left: 18px; }
+.s13-gap-card li { margin-bottom: 6px; font-size: 14px; }
+</style>
+<details class="fold"><summary class="section-heading"><h2>13. Product Selection — After Eligibility Is Confirmed</h2></summary>
 <div class="notice ok" style="margin-bottom:18px;font-size:13px;"><strong>Preview mode — content is editable.</strong> Click any text below to edit it directly. Changes are temporary in this browser view (not saved to the file). Use this to refine wording or layout notes, then copy your final text back into the master protocol.</div>
 <p class="notice stop" contenteditable="true"><strong>Product selection never overrides eligibility.</strong> Complete Stages A and B before using this section. If COC is rejected anywhere in §§3–9—including diagnosed or treated hypertension or a clinic/home BP meeting the applicable rejection threshold in §9.3—stop the COC route and assess POP. Choosing a “lower-risk” COC does not make an ineligible patient eligible.</p>
+<div class="s13-section-intro">
+  <strong>How to use this section</strong><br>
+  Complete Stages A and B first. Product selection follows eligibility—never the reverse. Use the visual principles, COC ladder (preserved below), symptom guide, and POP choice cards in order. Local defaults are labelled separately from FSRH recommendations.
+</div>
+
 
 <details class="tfold" open id="s13-1" data-sub><summary><h3>13.1 Selection principles</h3></summary>
-<div class="rx-grid three">
-  <article class="rx-card good" contenteditable="true"><h5>Continue what already works</h5><p>A medically eligible established user may continue a verified formulary product that is acceptable and correctly used. There is no requirement to “step down” or fail the local default first.</p></article>
-  <article class="rx-card info" contenteditable="true"><h5>Use informed choice</h5><p>Discuss material differences in VTE risk, dose, schedule, missed-pill window and likely bleeding pattern. Record the reason for an alternative where relevant.</p></article>
-  <article class="rx-card warn" contenteditable="true"><h5>Separate evidence from policy</h5><p>FSRH recommendations and product licences are labelled separately from EveryDayMeds formulary defaults, remote-service exclusions and operational safeguards.</p></article>
+<div class="s13-visual" style="margin:16px 0 20px;font-family:Calibri,'Segoe UI',Arial,sans-serif;">
+  <style>
+    .s13-visual {background:#f7faf8;border-radius:14px;padding:18px;border:1px solid #d4dfd6;}
+    .s13-visual .s13-header {display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+    .s13-visual .s13-title {font-size:20px;font-weight:700;color:#0B4131;margin:0;}
+    .s13-visual .s13-logo {color:#0B4131;font-weight:700;font-size:14px;}
+    .s13-visual .stop-banner {background:#fff5f5;border:1.5px solid #f5b4b4;border-radius:10px;padding:12px 14px;margin-bottom:16px;display:flex;gap:12px;align-items:flex-start;}
+    .s13-visual .stop-icon {background:#dc2626;color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;flex:none;font-weight:800;font-size:18px;}
+    .s13-visual .stop-text {color:#7a1f30;font-size:14px;line-height:1.45;}
+    .s13-visual .stop-text strong {display:block;font-size:15px;margin-bottom:2px;}
+    .s13-visual .cards {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:16px;}
+    .s13-visual .card {background:#fff;border-radius:12px;padding:14px 14px 12px;border:1.5px solid;box-shadow:0 1px 3px rgba(11,65,49,.06);}
+    .s13-visual .card.green {border-color:#add0ae;}
+    .s13-visual .card.blue {border-color:#aabfe3;}
+    .s13-visual .card.amber {border-color:#dfc382;}
+    .s13-visual .card-icon {width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:8px;font-size:16px;}
+    .s13-visual .card.green .card-icon {background:#eaf5e9;color:#285e36;}
+    .s13-visual .card.blue .card-icon {background:#e8effc;color:#28497c;}
+    .s13-visual .card.amber .card-icon {background:#fff4dc;color:#80540e;}
+    .s13-visual .card h4 {margin:0 0 6px;font-size:15px;font-weight:700;}
+    .s13-visual .card.green h4 {color:#285e36;}
+    .s13-visual .card.blue h4 {color:#28497c;}
+    .s13-visual .card.amber h4 {color:#80540e;}
+    .s13-visual .card p {margin:0;font-size:13.5px;line-height:1.45;color:#1a2e23;}
+    .s13-visual .restart-bar {background:#eaf5e9;border:1.5px solid #add0ae;border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-size:14px;color:#20492c;}
+    .s13-visual .restart-bar strong {font-weight:700;}
+    .s13-visual .src-row {margin-top:10px;font-size:12px;color:#52665a;}
+    .s13-visual .src-chip {display:inline-block;background:#f1f6ef;border:1px solid #d5e2cc;border-radius:4px;padding:2px 7px;margin-left:6px;}
+  </style>
+  <div class="s13-header">
+    <h3 class="s13-title">13.1 Selection Principles — After Eligibility Confirmed</h3>
+    <div class="s13-logo">+ EveryDayMeds</div>
+  </div>
+  <div class="stop-banner">
+    <div class="stop-icon">−</div>
+    <div class="stop-text">
+      <strong>Product selection never overrides eligibility.</strong>
+      Complete Stages A & B first.<br>
+      If COC rejected → assess POP.
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card green">
+      <div class="card-icon">✓</div>
+      <h4>1. Continue what already works</h4>
+      <p>Medically eligible established user may continue verified acceptable product. No forced step-down.</p>
+    </div>
+    <div class="card blue">
+      <div class="card-icon">💬</div>
+      <h4>2. Use informed choice</h4>
+      <p>Discuss VTE risk, dose, schedule, missed-pill window, bleeding pattern. Record reason for alternative.</p>
+    </div>
+    <div class="card amber">
+      <div class="card-icon">📄</div>
+      <h4>3. Separate evidence from policy</h4>
+      <p>FSRH recommendations and licences labelled separately from EveryDayMeds local defaults and safeguards.</p>
+    </div>
+  </div>
+  <div class="restart-bar">
+    <span style="font-size:20px;">↺</span>
+    <div><strong>Restart after ≥1 month COC break</strong> = new VTE risk period → Recheck eligibility + counsel (use §14). &nbsp;|&nbsp; Previous successful product OK if still eligible.</div>
+  </div>
+  <div class="src-row">Source: <span class="src-chip">CHC §10.1</span> <span class="src-chip">§15.1.2</span></div>
 </div>
-<p>A restart after a COC break of at least 1 month is treated as a new period of increased VTE risk. Recheck eligibility, explain the risk and use <a href="#s14">§14</a> for the restart. A product used successfully in the past may still be selected if it remains eligible, verified and acceptable. <span class="src" data-tip="FSRH Combined Hormonal Contraception — CHC §10.1 and §15.1.2">CHC §10.1 · §15.1.2</span></p>
+
+
 </details>
 
 <details class="tfold" open id="s13-2" data-sub><summary><h3>13.2 COC — formulation choice</h3></summary>
@@ -2006,19 +2097,57 @@ details.fold[open]>:not(summary),details.tfold[open]>:not(summary){animation:non
 </details>
 
 <div class="rx-board purple" role="group" aria-labelledby="coc-symptoms-title">
-  <div class="rx-title"><div><h4 id="coc-symptoms-title">Symptoms guide assessment—not a brand ladder</h4><p>Deal with the problem first; select another eligible product only when an empirical trial is reasonable.</p></div><div class="rx-icon" aria-hidden="true">?</div></div>
-  <div class="rx-symptoms">
-    <div class="rx-symptom"><span class="orb">H</span><div><strong>Headache, bloating, tenderness or pain in the HFI</strong><p>After safety assessment, a shortened, extended or continuous eligible monophasic regimen may help. Use §14.6.</p></div></div>
-    <div class="rx-symptom"><span class="orb">B</span><div><strong>Unscheduled bleeding</strong><p>Use §17.1. Exclude other causes and examine/refer when indicated before escalating treatment. No mandatory norgestimate step exists.</p></div></div>
-    <div class="rx-symptom"><span class="orb">A</span><div><strong>Acne or androgenic concern</strong><p>COC overall can improve acne, but no formulation is consistently superior. Any switch is an empirical trial.</p></div></div>
-    <div class="rx-symptom"><span class="orb">M</span><div><strong>Mood, libido or weight concern</strong><p>Assess other causes and severity. There is no evidence-based “best pill”; support an eligible change if the patient prefers.</p></div></div>
-    <div class="rx-symptom"><span class="orb">P</span><div><strong>Premenstrual symptoms</strong><p>If contraception is also wanted, a tailored regimen or eligible formulation may be tried. Evidence is modest; do not guarantee benefit.</p></div></div>
-    <div class="rx-symptom"><span class="orb">!</span><div><strong>Any new CV, VTE, migraine, BP or medicine issue</strong><p>Re-run §§4–9. If COC is rejected, no lower-risk progestogen or EE dose rescues the class.</p></div></div>
+  <div class="s13-symptoms-visual" style="margin:20px 0;font-family:Calibri,'Segoe UI',Arial,sans-serif;">
+  <style>
+    .s13-symptoms-visual {background:#f7faf8;border-radius:14px;padding:18px 16px;border:1px solid #d4dfd6;}
+    .s13-symptoms-visual .s13-head {margin-bottom:14px;}
+    .s13-symptoms-visual .s13-head h3 {margin:0 0 4px;font-size:20px;font-weight:700;color:#0B4131;}
+    .s13-symptoms-visual .s13-head p {margin:0;font-size:14px;color:#52665a;line-height:1.45;}
+    .s13-symptoms-visual .symptom-row {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:14px;}
+    .s13-symptoms-visual .sym-card {background:#fff;border-radius:10px;padding:12px 12px 10px;border-left:4px solid;box-shadow:0 1px 2px rgba(0,0,0,.04);}
+    .s13-symptoms-visual .sym-card.h {border-color:#285e36;}
+    .s13-symptoms-visual .sym-card.b {border-color:#80540e;}
+    .s13-symptoms-visual .sym-card.a {border-color:#28497c;}
+    .s13-symptoms-visual .sym-card.m {border-color:#6b4c9a;}
+    .s13-symptoms-visual .sym-card.p {border-color:#1a7a6d;}
+    .s13-symptoms-visual .sym-card strong {display:block;font-size:13.5px;margin-bottom:4px;}
+    .s13-symptoms-visual .sym-card p {margin:0;font-size:12.5px;line-height:1.4;color:#1a2e23;}
+    .s13-symptoms-visual .safety-bar {background:#fdecef;border:1px solid #e7acb8;border-radius:8px;padding:10px 12px;margin-bottom:16px;font-size:13.5px;color:#7a1f30;line-height:1.45;}
+    .s13-symptoms-visual .choice-header {background:#0B4131;color:#fff;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-weight:700;font-size:14.5px;}
+    .s13-symptoms-visual .steps {display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:12px;}
+    .s13-symptoms-visual .step {background:#fff;border:1px solid #d4dfd6;border-radius:10px;padding:12px;font-size:13px;}
+    .s13-symptoms-visual .step strong {display:block;color:#0B4131;margin-bottom:4px;}
+    .s13-symptoms-visual .notes {display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .s13-symptoms-visual .note {border-radius:8px;padding:10px 12px;font-size:12.5px;line-height:1.4;}
+    .s13-symptoms-visual .note.green {background:#eaf5e9;border:1px solid #add0ae;color:#20492c;}
+    .s13-symptoms-visual .note.red {background:#fdecef;border:1px solid #e7acb8;color:#7a1f30;}
+    .s13-symptoms-visual .footer {margin-top:12px;font-size:11.5px;color:#52665a;text-align:center;}
+  </style>
+  <div class="s13-head">
+    <h3>Symptoms Guide Assessment — Not a Brand Ladder</h3>
+    <p>Deal with the problem first. Select another eligible product only when an empirical trial is reasonable after safety assessment. FSRH does not require a fixed fail-first ladder.</p>
   </div>
+  <div class="symptom-row">
+    <div class="sym-card h"><strong>H · Headache, bloating, breast tenderness or pain in the HFI</strong><p>After excluding red flags, a shortened hormone-free interval, extended or continuous eligible monophasic regimen may reduce symptoms. Use §14.6. Not a reason to change progestogen generation.</p></div>
+    <div class="sym-card b"><strong>B · Unscheduled bleeding</strong><p>Follow §17.1. Exclude pregnancy, infection, cervical pathology and other causes; examine or refer when indicated before any treatment change. No mandatory norgestimate or other specific progestogen step exists.</p></div>
+    <div class="sym-card a"><strong>A · Acne or androgenic concern</strong><p>Combined hormonal contraception can improve acne overall, but no single formulation is consistently superior. Any switch is an empirical trial after safety checks.</p></div>
+    <div class="sym-card m"><strong>M · Mood, libido or weight concern</strong><p>Assess severity and alternative causes first. There is no evidence-based “best pill”. An eligible change can be supported if the patient prefers after counselling.</p></div>
+    <div class="sym-card p"><strong>P · Premenstrual symptoms</strong><p>If contraception is also required, a tailored extended/continuous regimen or another eligible formulation may be tried. Evidence of benefit is modest; do not guarantee improvement.</p></div>
+  </div>
+  <div class="safety-bar"><strong>!</strong> Any new cardiovascular, VTE, migraine with aura, blood pressure or interacting medicine issue → Immediately re-run eligibility §§4–9. If COC is rejected, no lower-VTE progestogen or lower EE dose rescues the class.</div>
+  <div class="choice-header">COC Product Choice for Prescribers — Use only after full COC eligibility is confirmed.</div>
+  <div class="steps">
+    <div class="step"><strong>1 · Previous product?</strong>Identify exact formulation, duration of use, any break length ≥1 month, tolerability and reason for change.</div>
+    <div class="step"><strong>2 · Successful and still eligible?</strong>Continue or restart the verified product. A default-first or step-down trial is not required.</div>
+    <div class="step"><strong>3 · New start or changing product?</strong>Offer a verified ≤30 µg EE + levonorgestrel or norethisterone formulation (local COC-2A default) or an informed eligible alternative. Record the reason if an alternative is chosen.</div>
+    <div class="step"><strong>4 · Final authorisation checks</strong>Comparative VTE counselling, exact schedule and current SmPC, start/switch plan (§14 or §15), missed-pill advice (§16), quantity and review plan, independent prescriber authorisation.</div>
+  </div>
+  <div class="notes">
+    <div class="note green"><strong>Lower VTE band preferred when acceptable.</strong> Norgestimate remains in the lower VTE band but contains 35 µg EE — assess individually.</div>
+    <div class="note red"><strong>Higher VTE band chosen:</strong> Record patient-specific reason, comparison with lower band, and informed acceptance. This is not a routine escalation step.</div>
+  </div>
+  <div class="footer">Evidence-based · Patient-centred · Safety-first · FSRH CHC aligned · EveryDayMeds local policy labelled separately</div>
 </div>
-
-<div class="rx-board" role="group" aria-labelledby="coc-choice-title">
-  <div class="rx-title"><div><h4 id="coc-choice-title">COC product choice for prescribers</h4><p>Use only after COC eligibility has been confirmed.</p></div><div class="rx-labels"><span class="rx-label fsrh">comparative-risk rule</span><span class="rx-label local">local default</span></div></div>
   <div class="rx-flow">
     <div class="rx-node"><strong>1 · Previous product?</strong>Identify the formulation, experience, break length and reason for change.</div>
     <div class="rx-node yes"><strong>2 · Successful and still eligible?</strong>Continue/restart the verified product; a default-first trial is not required.</div>
@@ -2030,6 +2159,19 @@ details.fold[open]>:not(summary),details.tfold[open]>:not(summary){animation:non
 </details>
 
 <details class="tfold" open id="s13-3" data-sub><summary><h3>13.3 POP — type choice</h3></summary>
+<div class="s13-symptoms-visual" style="margin:16px 0;">
+  <div class="s13-head">
+    <h3 style="margin:0 0 6px;color:#0B4131;">13.3 POP — Type Choice (FSRH-aligned)</h3>
+    <p style="margin:0;font-size:14px;color:#52665a;">FSRH does not identify one POP as universally superior. Selection is driven by eligibility, missed-pill window, schedule, previous experience and bleeding expectations. Local default is labelled separately.</p>
+  </div>
+  <div class="symptom-row">
+    <div class="sym-card" style="border-left:4px solid #6b4c9a;"><strong>Traditional LNG/NET · 3-hour window</strong><p>Continuous daily pill, no HFI. Ovulation not reliably suppressed. Suitable for previous success or informed preference. Local role only — not first-line default.</p></div>
+    <div class="sym-card" style="border-left:4px solid #285e36;"><strong>Desogestrel 75 µg · 12-hour window</strong><p>Continuous daily pill. Ovulation usually suppressed. Usual EveryDayMeds local default because of the wider window and simple schedule — not proven superior efficacy. Bleeding remains unpredictable.</p></div>
+    <div class="sym-card" style="border-left:4px solid #28497c;"><strong>Drospirenone 4 mg · 24-hour window</strong><p>24 active + 4 placebo. Widest window but different start/missed-pill rules. Requires renal/potassium checks (§11) and exact SmPC review before selection.</p></div>
+  </div>
+  <div class="safety-bar"><strong>Meningioma rule:</strong> Current or previous meningioma → do not select any hormonal product in this online pathway. Hold and obtain specialist advice under §5.2.</div>
+</div>
+
 <p>FSRH does not identify one POP type as universally superior. Selection is driven mainly by eligibility, adherence window, schedule, previous experience, bleeding expectations and preference. <span class="src" data-tip="FSRH Progestogen-only Pills — POP §7, §8, §12 and §16">POP §7 · §8 · §12 · §16</span></p>
 
 <div class="rx-board blue" role="group" aria-labelledby="pop-choice-title">
@@ -2050,6 +2192,31 @@ details.fold[open]>:not(summary),details.tfold[open]>:not(summary){animation:non
 </div>
 </details>
 
+
+<div class="s13-gap-card">
+  <h4>Scope boundaries — products outside or restricted in this online pathway (local policy)</h4>
+  <ul>
+    <li><strong>Combined patch and vaginal ring:</strong> Not currently offered. FSRH allows them when absorption is a concern or by preference; if requested, refer or signpost rather than prescribe remotely.</li>
+    <li><strong>Co-cyprindiol (Dianette-type):</strong> Not a routine contraceptive. Reserved for acne/hirsutism under specialist or face-to-face care. Not available via this online service.</li>
+    <li><strong>Estetrol/drospirenone (Drovelis) and other newer CHC:</strong> Not on the current formulary. Document any future addition with SmPC and VTE data review before activation.</li>
+  </ul>
+</div>
+<div class="s13-gap-card">
+  <h4>Absolute risk communication and written information (FSRH expectation)</h4>
+  <ul>
+    <li>Inform eligible COC users of approximate absolute VTE risks (non-user ~2, lower-VTE COC ~5–7, higher-VTE COC ~9–12 per 10,000 woman-years). Record that comparative risk was discussed.</li>
+    <li>Provide or link to trusted written/online information (FSRH patient resources or equivalent) covering how to take the pill, missed-pill rules, and when to seek urgent help.</li>
+    <li>For higher-VTE choices, document the specific reason, comparison with the lower band, and informed acceptance.</li>
+  </ul>
+</div>
+<div class="s13-gap-card">
+  <h4>Interaction cross-links affecting product choice</h4>
+  <ul>
+    <li>Enzyme-inducing medicines: Avoid CHC or use additional precautions / alternative method per §§ interactions and FSRH. Do not rely on higher-dose COC alone.</li>
+    <li>Lamotrigine: Levels may fall with CHC; specialist advice usually required before initiation or switch.</li>
+    <li>Other clinically important interactions: Apply the protocol interaction rules before final product selection. If unresolved, mark “Further assessment required”.</li>
+  </ul>
+</div>
 <details class="tfold" open id="s13-4" data-sub><summary><h3>13.4 Final authorisation checklist</h3></summary>
 <ul class="rx-check">
   <li>Stage A and the correct Stage B pathway are complete; no unresolved rejection, red flag or information gap remains.</li>
@@ -2065,20 +2232,27 @@ details.fold[open]>:not(summary),details.tfold[open]>:not(summary){animation:non
 </details>
 </details></section>
 
-<section id="s14" class="protocol-section"><details class="fold"><summary class="section-heading"><h2>14. Starting and Quick Starting</h2></summary>
+<section id="s14" class="protocol-section"><details class="fold"><summary class="section-heading"><h2>14. Starting and Quick Starting</h2></summary><div class="s13-section-intro" style="margin-top:8px;">
+  <strong>Link from §13</strong><br>
+  Product selection is complete. Apply the start or switch rules below only for the exact verified product authorised under §13. Direct switches follow §15; incorrect use follows §16.
+</div>
+
 <p>Use this section only after eligibility and the exact product are confirmed under §§3–13. A direct switch from another method follows <a href="#s15">§15</a>; incorrect use follows <a href="#s16">§16</a>.</p>
 
-<div class="rx-board blue" role="group" aria-labelledby="start-flow-title">
-  <div class="rx-title"><div><h4 id="start-flow-title">Starting a selected pill</h4><p>Six checks from eligibility to written instructions.</p></div><div class="rx-icon" aria-hidden="true">S</div></div>
-  <ol class="rx-steps">
-    <li><strong>Eligible product?</strong>No → return to §§3–13. Do not start.</li>
-    <li><strong>Actually switching?</strong>Yes → use §15 and verify correct use.</li>
-    <li><strong>Recent UPSI or EC?</strong>Assess EC first; UPA creates a 5-day delay.</li>
-    <li><strong>Exclude pregnancy</strong>Use the checklist below; a negative test has limits.</li>
-    <li><strong>Apply start rule</strong>COC 7 days; traditional/DSG POP 2; DRSP POP 7 when quick started.</li>
-    <li><strong>Record and explain</strong>Start date, backup, test date, regimen and §16 advice.</li>
-  </ol>
-  <div class="rx-note stop"><strong>Same-day EC decision:</strong> if EC may be indicated, do not leave the patient with only a future contraceptive start. Follow the current EC pathway that day and record the interim plan.</div>
+<div class="s13-symptoms-visual" style="margin:16px 0 20px;">
+  <div class="s13-head">
+    <h3 style="margin:0 0 4px;color:#0B4131;">Starting a selected pill</h3>
+    <p style="margin:0;font-size:14px;color:#52665a;">Six checks from eligibility to written instructions. Use only after product is confirmed under §13.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><strong>1 · Eligible product?</strong>No → return to §§3–13. Do not start.</div>
+    <div class="step"><strong>2 · Actually switching?</strong>Yes → use §15 and verify correct use.</div>
+    <div class="step"><strong>3 · Recent UPSI or EC?</strong>Assess EC first; UPA creates a 5-day delay.</div>
+    <div class="step"><strong>4 · Exclude pregnancy</strong>Use the checklist below; a negative test has limits.</div>
+    <div class="step"><strong>5 · Apply start rule</strong>COC 7 days; traditional/DSG POP 2; DRSP POP 7 when quick started.</div>
+    <div class="step"><strong>6 · Record and explain</strong>Start date, backup, test date, regimen and §16 advice.</div>
+  </div>
+  <div class="safety-bar"><strong>Same-day EC decision:</strong> if EC may be indicated, do not leave the patient with only a future contraceptive start. Follow the current EC pathway that day and record the interim plan.</div>
 </div>
 
 <details class="tfold" open id="s14-1" data-sub><summary><h3>14.1 Before starting — pregnancy and EC assessment</h3></summary>
